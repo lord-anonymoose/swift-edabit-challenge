@@ -26,3 +26,26 @@ func billSplit (_ foods: [String], _ prices: [Int]) -> [Double]
     }
     return [myBill, friendsBill]
 }
+
+/*
+https://edabit.com/challenge/ZBmkoDprB7AMDtJBn
+Product of All Other Numbers
+You have an array of integers, and for each index you want to find the product of every integer except the integer at that index.
+Create a function that takes an array of integers and returns an array of the products.
+*/
+func getProducts(_ arr: [Int]) -> [Int] {
+	var temp_arr = arr
+	for i in 0...temp_arr.count-1
+	{
+		temp_arr[i] = 1
+	}
+	for i in 0...temp_arr.count-1
+	{
+		for j in 1...arr.count-1
+		{
+			if j != i 
+			{
+				temp_arr[i] *= arr[j]
+			}
+		}
+	}
