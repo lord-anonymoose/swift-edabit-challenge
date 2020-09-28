@@ -9,7 +9,6 @@
 
  Given two ordered arrays, one classifying the dishes as spicy vs. non-spicy and the other listing their prices, write a function that outputs an array where the first element is how much you pay and the second element is how much your friend pays.
  */
-
 func billSplit (_ foods: [String], _ prices: [Int]) -> [Double]
 {
     var myBill = 0.0
@@ -82,7 +81,6 @@ func lcm(_ n1: Int, _ n2: Int) -> Int {
 Return the Remainder from Two Numbers
 There is a single operator in Swift, capable of providing the remainder of a division operation. Two numbers are passed as parameters. The first parameter divided by the second parameter will have a remainder, possibly zero. Return that value.
 */
-
 func remainder(_ x: Int, _ y: Int) -> Int {
 	var result = x
 	if (result < y)
@@ -100,4 +98,24 @@ func remainder(_ x: Int, _ y: Int) -> Int {
 		}
 		return result
 	}
+}
+
+/*
+https://edabit.com/challenge/urmQAGrs3nmWM7WuS
+Digit Distance
+The digit distance between two numbers is the total value of the difference between each pair of digits.
+*/
+func digitDistance(_ num1: Int, _ num2: Int) -> Int {
+	var result = 0
+	var first = num1
+	var second = num2
+	while (first > 0) && (second > 0)
+	{
+		result += abs(first % 10 - second % 10)
+		first -= first % 10
+		first /= 10
+		second -= second % 10
+		second /= 10
+	}
+	return result
 }
