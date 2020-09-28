@@ -49,3 +49,31 @@ func getProducts(_ arr: [Int]) -> [Int] {
 			}
 		}
 	}
+
+/*
+https://edabit.com/challenge/N5hWKCw2ySAK3WjAp
+LCM of Two Numbers
+Write a function that returns the least common multiple (LCM) of two integers.
+*/
+func lcm(_ n1: Int, _ n2: Int) -> Int {
+	var result:	Int
+	var maxElement: Int
+	if (n1 > n2)
+	{
+		maxElement = n1
+	} else
+	{
+		maxElement = n2
+	}
+	result = maxElement
+	while true
+	{
+		if (result % n1 == 0) && (result % n2 == 0)
+		{
+			return result
+		} else
+		{
+			result += maxElement
+		}
+	}
+}
