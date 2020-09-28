@@ -119,3 +119,49 @@ func digitDistance(_ num1: Int, _ num2: Int) -> Int {
 	}
 	return result
 }
+	
+/*
+https://edabit.com/challenge/AfcezoYgqzNPce8yN
+Left Side, Right Side
+Create two functions:
+1. Leftside function: Returns count of numbers strictly smaller than n on the left.
+2. Rightside function: Returns count of numbers strictly smaller than n on the right.
+*/
+func leftSide(_ arr: [Int]) -> [Int] {
+	var result = arr
+	for i in 0...result.count-1
+	{
+		result[i] = 0
+	}
+	for i in 1...result.count-1
+	{
+		for j in 0...i-1 
+		{
+			if (arr[j] < arr[i])
+			{
+				result[i] += 1
+			}
+		}
+	}
+	return result
+}
+
+func rightSide(_ arr: [Int]) -> [Int] {
+	var result = arr
+	for i in 0...result.count-1
+	{
+		result[i] = 0
+	}
+	
+	for i in 0...result.count-2
+	{
+		for j in i+1...result.count-1 
+		{
+			if (arr[j] < arr[i])
+			{
+				result[i] += 1
+			}
+		}
+	}
+	return result
+}
