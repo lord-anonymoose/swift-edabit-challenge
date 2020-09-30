@@ -95,6 +95,53 @@ func divisible(_ num: Int) -> Bool {
 	}
 }
 
+//Divides evenly
+func dividesEvenly(_ a: Int, _ b:Int) -> Bool {
+	return a % b == 0
+}
 
+//Is the Number Less than or Equal to Zero?
+func lessThanOrEqualToZero(_ num: Double) -> Bool {
+	return num <= 0
+}
 
+// Concat two arrays
+func concat(_ arr1: [Int], _ arr2: [Int]) -> [Int] {
+	return arr1 + arr2
+}
+
+//Profitable Gamble
+func profitableGamble(_ prob: Float, _ prize: Float, _ pay: Float) -> Bool {
+	return prob * prize - pay > 0
+}
+
+//Reverse bool
+func reverse(_ flip: Bool) -> Bool {
+	if flip == true {
+		return false
+	} else {
+		return true
+	}
+}
+
+//Name greeting!
+func helloName(_ name: String) -> String {
+	return "Hello \(name)!"
+}
+
+//Farm problem
+func animals(_ chickens: Int, _ cows: Int, _ pigs: Int) -> Int {
+	return chickens * 2 + (cows + pigs) * 4
+}
+
+//Reversed array
+func reverse(_ arr: [Int]) -> [Int] {
+	var result = arr
+	if arr != [Int]() {
+		for i in 0...arr.count-1 {
+			result[arr.count - 1 - i] = arr[i]
+		}
+	} 
+	return result
+}
 
