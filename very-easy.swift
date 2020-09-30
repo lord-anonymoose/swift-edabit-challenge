@@ -145,3 +145,14 @@ func reverse(_ arr: [Int]) -> [Int] {
 	return result
 }
 
+//Return the first element of the array
+func getFirstValue(_ array: [Int]) -> Int {
+	return array[0]
+}
+
+//Check String for spaces
+func hasSpaces(_ str: String) -> Bool {
+		return str.contains (" ")
+}
+
+
