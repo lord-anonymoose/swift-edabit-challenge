@@ -168,4 +168,20 @@ func factorChain(_ arr: [Int]) -> Bool {
 	return result
 }
 
+/*
+https://edabit.com/challenge/KmBxMoRyocwNBweKb
+Sort Numbers in Ascending Order
+Create a function that takes an array of numbers and returns a new array, sorted in ascending order (smallest to biggest).
+Rules
+Sort numbers array in ascending order.
+If functions argument is nil, an empty array or undefined, return an empty array.
+Return new array of sorted numbers.
+*/
+func sortNumsAscending(_ arr: [Int]?) -> [Int] {
+	if (arr != nil) {
+		return arr!.sorted()
+	} else {
+		return [Int]()
+	}
+}
 
