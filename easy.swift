@@ -152,6 +152,20 @@ func calculator (_ first: Int, _ command: String, _ second: Int) throws -> Int
     return result
 }
 
-
+/*
+https://edabit.com/challenge/f3iTDZdnbSib6XDzX
+Factor Chain
+A factor chain is an array where each previous element is a factor of the next consecutive element. The following is a factor chain:
+Create a function that determines whether or not an array is a factor chain.
+*/
+func factorChain(_ arr: [Int]) -> Bool {
+	var result = true
+	for i in 0...arr.count-2 {
+		if (arr[i+1] % arr[i] != 0) {
+			result = false
+		}
+	}
+	return result
+}
 
 
