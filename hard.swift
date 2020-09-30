@@ -165,3 +165,35 @@ func rightSide(_ arr: [Int]) -> [Int] {
 	}
 	return result
 }
+
+/*
+https://edabit.com/challenge/rD9G2PLDbiCNThBMC
+Which Number Is Not like the Others?
+Create a function that takes an array of numbers and return the number that's unique.
+*/
+func unique(_ arr: [Double]) -> Double {
+	var firstCount = 0
+	var firstNumber = 0.0
+	var secondCount = 0
+	var secondNumber = 0.0
+	
+	firstNumber = arr[0]
+	firstCount += 1
+	
+	for i in 1...arr.count - 1
+	{
+		if arr[i] == firstNumber {
+			firstCount += 1
+		} else {
+			secondNumber = arr[i]
+			secondCount += 1
+		}
+	}
+	
+	if firstCount == 1 {
+		return firstNumber
+	} else {
+		return secondNumber
+	}
+	
+}
